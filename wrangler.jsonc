@@ -1,0 +1,35 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "tauron-ics",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-17",
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 0.01,
+    },
+  },
+  "secrets": {
+    "required": [
+      "CALENDAR_TOKEN",
+      "TAURON_CITY",
+      "TAURON_STREET",
+      "TAURON_HOUSE_NUMBER",
+      "TAURON_MESSAGE_PREFIX",
+    ],
+  },
+  "triggers": {
+    "crons": ["17 */6 * * *"],
+  },
+  "kv_namespaces": [
+    {
+      "binding": "CALENDAR_KV",
+      "id": "685b8c1924fd4019b4935ca70dd5541e",
+    },
+  ],
+}

@@ -1,0 +1,5 @@
+CALENDAR_TOKEN="replace-with-a-long-random-token"
+TAURON_CITY="your-city"
+TAURON_STREET="your-street"
+TAURON_HOUSE_NUMBER="your-house-number"
+TAURON_MESSAGE_PREFIX="your-city"
